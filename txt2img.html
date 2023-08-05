@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Image Generator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    padding: 20px;
+  }
+  #inputText {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+  }
+  #generateBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  #resultImage {
+    margin-top: 20px;
+    max-width: 100%;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>AI Image Generator</h1>
+    <p>Enter text to generate an image:</p>
+    <input type="text" id="inputText" placeholder="Enter your text...">
+    <button id="generateBtn">Generate Image</button>
+    <div id="resultImage"></div>
+  </div>
+  
+  <script>
+    const generateBtn = document.getElementById('generateBtn');
+    const inputText = document.getElementById('inputText');
+    const resultImage = document.getElementById('resultImage');
+    
+    generateBtn.addEventListener('click', () => {
+      const text = inputText.value.trim();
+      if (text !== '') {
+        // You can call your AI model's backend here and use the result to display an image.
+        // For this example, we'll just display a placeholder image.
+        resultImage.innerHTML = `<img src="placeholder.jpg" alt="Generated Image">`;
+      }
+    });
+  </script>
+</body>
+</html>
